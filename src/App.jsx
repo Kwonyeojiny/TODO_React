@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import './App.css'
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
 import Clock from './components/Clock'
 import StopWatch from './components/StopWatch'
+import Timer from './components/Timer'
 
 function App() {
   const [todo, setTodo] = useState([
@@ -14,6 +15,7 @@ function App() {
     <>
       <Clock />
       <StopWatch/>
+      <Timer/>
       <TodoInput setTodo={setTodo}/>
       <TodoList todo={todo} setTodo={setTodo}/>
     </>
