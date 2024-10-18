@@ -3,6 +3,7 @@ import './App.css'
 import TodoInput from './components/TodoInput'
 import TodoList from './components/TodoList'
 import Clock from './components/Clock'
+import StopWatch from './components/StopWatch'
 
 function App() {
   const [todo, setTodo] = useState([
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Clock />
+      <StopWatch/>
       <TodoInput setTodo={setTodo}/>
       <TodoList todo={todo} setTodo={setTodo}/>
     </>
