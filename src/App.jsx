@@ -5,6 +5,7 @@ import TodoList from './components/TodoList'
 import Clock from './components/Clock'
 import StopWatch from './components/StopWatch'
 import Timer from './components/Timer'
+import Advice from './components/Advice'
 
 function App() {
   const [todo, setTodo] = useState([
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <>
+      <Advice />
       <Clock />
       <StopWatch/>
       <Timer/>
