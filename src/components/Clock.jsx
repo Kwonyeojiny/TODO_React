@@ -10,7 +10,7 @@ const Clock = () => {
   }, [])
 
   return (
-    <div>{time.toLocaleTimeString()}</div>
+    <div className="clock">{time.toLocaleTimeString()}</div>
   )
 }
 

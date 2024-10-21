@@ -53,6 +53,7 @@ li > div:last-child {
 .clock {
     font-size: 24px;
     margin-bottom: 30px;
+    text-align: right;
 }
 
 .advice {

@@ -4,11 +4,15 @@ const TodoInput = ({setTodo}) => {
   const inputRef = useRef(null)
 
   const addTodo = () => {
-    const newTOdo = {
-      id : Number(new Date()),
-      content : inputRef.current.value
+    const newTodo = {
+      content : inputRef.current.value,
+      time : 0
     }
-    setTodo((prev) => [newTOdo, ...prev])
+    fetch('http://localhost:3000/todo',{
+      method: "POST",
+      body: JSON.stringify(newTodo)
+    }).then(res => res.json())
+      .then((res) => setTodo((prev) => [ ...prev, res]))
   }
 
   return (

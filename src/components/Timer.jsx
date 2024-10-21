@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import formatTime from "./formatTime";
 
-const Timer = () => {
+const Timer = ({time, setTime}) => {
   const [startTime, setStartTime] = useState(0)
   const [isOn,setIsOn] = useState(false);
-  const [time,setTime] = useState(0)
   const timerRef = useRef(null)
 
   useEffect(()=>{
@@ -34,8 +33,8 @@ const Timer = () => {
           setIsOn(false)
         }
         } >리셋</button>
-      </div>
-      <input 
+        <br/>
+        <input 
         type="range" 
         value={startTime}
         min='0'
@@ -43,6 +42,8 @@ const Timer = () => {
         step='30'
         onChange={(e)=>setStartTime(e.target.value)}
       />
+      </div>
+      
     </>
   )
 

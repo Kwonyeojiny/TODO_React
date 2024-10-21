@@ -1,9 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import formatTime from "./formatTime";
 
-const StopWatch = () => {
-
-  const [time, setTime] = useState(0)
+const StopWatch = ({time, setTime}) => {
   const [isOn, setIsOn] = useState(false)
   const timerRef = useRef(null)
 

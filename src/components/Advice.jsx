@@ -8,8 +8,8 @@ const Advice = () => {
     <>
       {!isLoading && (
         <>
-          <div>{data.message}</div>
-          <div>-{data.author}-</div>
+          <div className="advice">{data.message}</div>
+          <div className="advice">-{data.author}-</div>
         </>
       )}
     </>
